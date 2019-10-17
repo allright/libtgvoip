@@ -24,3 +24,15 @@ DerivedData/
 
 xcuserdata/
 autom4te.cache/
+*.lo
+*.o
+*.Plo
+.dirstamp
+.libs
+libtool
+Makefile
+config.log
+config.h
+config.status
+stamp-h1
+libtgvoip.la
