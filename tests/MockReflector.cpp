@@ -8,6 +8,7 @@
 #include <arpa/inet.h>
 #include <assert.h>
 #include <stdio.h>
+#include <string.h>
 
 using namespace tgvoip;
 using namespace tgvoip::test;
