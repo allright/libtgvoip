@@ -17,7 +17,7 @@ AM_PROG_AS
 AC_PROG_RANLIB
 
 # Checks for libraries.
-AC_CHECK_LIB([crypto], [SHA1], [], [AC_MSG_FAILURE([libssl-dev is required but not found])])
+# AC_CHECK_LIB([crypto], [SHA1], [], [AC_MSG_FAILURE([libssl-dev is required but not found])])
 AC_CHECK_LIB([m], [floorf])
 AC_CHECK_LIB([opus], [opus_decoder_create], [], [AC_MSG_FAILURE([libopus-dev is required but not found])])
 AC_CHECK_LIB([pthread], [pthread_create])
@@ -46,6 +46,10 @@ AM_CONDITIONAL(TARGET_OS_OSX, test "x$os_osx" == xyes)
 
 AC_ARG_ENABLE([audio-callback], [AS_HELP_STRING([--enable-audio-callback], [enable callback-based audio I/O])], [], [enable_audio_callback=no])
 AM_CONDITIONAL(ENABLE_AUDIO_CALLBACK, test "x$enable_audio_callback" == xyes)
+
+AS_IF([test "x$os_osx" != xyes], [ # Linux
+      AC_CHECK_LIB([crypto], [SHA1], [], [AC_MSG_FAILURE([libssl-dev is required but not found])])
+  ])
 
 AS_IF([test "x$os_osx" != xyes && test "x$enable_audio_callback" != xyes], [ # Linux
 	AC_CHECK_LIB([dl], [dlopen])
