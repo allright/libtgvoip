@@ -36,3 +36,4 @@ config.h
 config.status
 stamp-h1
 libtgvoip.la
+configure

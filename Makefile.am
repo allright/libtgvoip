@@ -64,11 +64,8 @@ os/darwin/AudioOutputAudioUnit.cpp \
 os/darwin/AudioUnitIO.cpp \
 os/darwin/AudioInputAudioUnitOSX.cpp \
 os/darwin/AudioOutputAudioUnitOSX.cpp \
-os/darwin/DarwinSpecific.mm \
-os/darwin/SampleBufferDisplayLayerRenderer.mm \
-os/darwin/TGVVideoRenderer.mm \
-os/darwin/TGVVideoSource.mm \
-os/darwin/VideoToolboxEncoderSource.mm
+os/darwin/DarwinSpecific.mm
+
 
 TGVOIP_HDRS += \
 os/darwin/AudioInputAudioUnit.h \
@@ -76,13 +73,10 @@ os/darwin/AudioOutputAudioUnit.h \
 os/darwin/AudioUnitIO.h \
 os/darwin/AudioInputAudioUnitOSX.h \
 os/darwin/AudioOutputAudioUnitOSX.h \
-os/darwin/DarwinSpecific.h \
-os/darwin/SampleBufferDisplayLayerRenderer.h \
-os/darwin/TGVVideoRenderer.h \
-os/darwin/TGVVideoSource.h \
-os/darwin/VideoToolboxEncoderSource.h
+os/darwin/DarwinSpecific.h
 
-LDFLAGS += -framework Foundation -framework CoreFoundation -framework CoreAudio -framework AudioToolbox -framework VideoToolbox -framework CoreMedia -framework CoreVideo
+
+LDFLAGS += -framework Foundation -framework CoreFoundation -framework CoreAudio -framework AudioToolbox -framework CoreMedia
 
 else
 # Linux-specific
