@@ -5,6 +5,6 @@ aclocal
 libtoolize --force
 automake --add-missing
 autoreconf
-./configure
-make -j8 --enable-audio-callback
+./configure --enable-audio-callback
+make -j8
 make install
