@@ -95,11 +95,7 @@ host_triplet = @host@
 @TARGET_OS_OSX_TRUE@os/darwin/AudioUnitIO.cpp \
 @TARGET_OS_OSX_TRUE@os/darwin/AudioInputAudioUnitOSX.cpp \
 @TARGET_OS_OSX_TRUE@os/darwin/AudioOutputAudioUnitOSX.cpp \
-@TARGET_OS_OSX_TRUE@os/darwin/DarwinSpecific.mm \
-@TARGET_OS_OSX_TRUE@os/darwin/SampleBufferDisplayLayerRenderer.mm \
-@TARGET_OS_OSX_TRUE@os/darwin/TGVVideoRenderer.mm \
-@TARGET_OS_OSX_TRUE@os/darwin/TGVVideoSource.mm \
-@TARGET_OS_OSX_TRUE@os/darwin/VideoToolboxEncoderSource.mm
+@TARGET_OS_OSX_TRUE@os/darwin/DarwinSpecific.mm
 
 @TARGET_OS_OSX_TRUE@am__append_2 = \
 @TARGET_OS_OSX_TRUE@os/darwin/AudioInputAudioUnit.h \
@@ -107,13 +103,9 @@ host_triplet = @host@
 @TARGET_OS_OSX_TRUE@os/darwin/AudioUnitIO.h \
 @TARGET_OS_OSX_TRUE@os/darwin/AudioInputAudioUnitOSX.h \
 @TARGET_OS_OSX_TRUE@os/darwin/AudioOutputAudioUnitOSX.h \
-@TARGET_OS_OSX_TRUE@os/darwin/DarwinSpecific.h \
-@TARGET_OS_OSX_TRUE@os/darwin/SampleBufferDisplayLayerRenderer.h \
-@TARGET_OS_OSX_TRUE@os/darwin/TGVVideoRenderer.h \
-@TARGET_OS_OSX_TRUE@os/darwin/TGVVideoSource.h \
-@TARGET_OS_OSX_TRUE@os/darwin/VideoToolboxEncoderSource.h
+@TARGET_OS_OSX_TRUE@os/darwin/DarwinSpecific.h
 
-@TARGET_OS_OSX_TRUE@am__append_3 = -framework Foundation -framework CoreFoundation -framework CoreAudio -framework AudioToolbox -framework VideoToolbox -framework CoreMedia -framework CoreVideo
+@TARGET_OS_OSX_TRUE@am__append_3 = -framework Foundation -framework CoreFoundation -framework CoreAudio -framework AudioToolbox -framework CoreMedia
 
 # Linux-specific
 @TARGET_OS_OSX_FALSE@@WITH_ALSA_TRUE@am__append_4 = \
@@ -821,13 +813,9 @@ am__libtgvoip_la_SOURCES_DIST = VoIPController.cpp Buffers.cpp \
 	os/darwin/AudioOutputAudioUnit.cpp os/darwin/AudioUnitIO.cpp \
 	os/darwin/AudioInputAudioUnitOSX.cpp \
 	os/darwin/AudioOutputAudioUnitOSX.cpp \
-	os/darwin/DarwinSpecific.mm \
-	os/darwin/SampleBufferDisplayLayerRenderer.mm \
-	os/darwin/TGVVideoRenderer.mm os/darwin/TGVVideoSource.mm \
-	os/darwin/VideoToolboxEncoderSource.mm \
-	os/linux/AudioInputALSA.cpp os/linux/AudioOutputALSA.cpp \
-	os/linux/AudioOutputPulse.cpp os/linux/AudioInputPulse.cpp \
-	os/linux/AudioPulse.cpp \
+	os/darwin/DarwinSpecific.mm os/linux/AudioInputALSA.cpp \
+	os/linux/AudioOutputALSA.cpp os/linux/AudioOutputPulse.cpp \
+	os/linux/AudioInputPulse.cpp os/linux/AudioPulse.cpp \
 	./webrtc_dsp/system_wrappers/source/field_trial.cc \
 	./webrtc_dsp/system_wrappers/source/metrics.cc \
 	./webrtc_dsp/system_wrappers/source/cpu_features.cc \
@@ -1434,9 +1422,6 @@ am__libtgvoip_la_SOURCES_DIST = VoIPController.cpp Buffers.cpp \
 	os/darwin/AudioOutputAudioUnit.h os/darwin/AudioUnitIO.h \
 	os/darwin/AudioInputAudioUnitOSX.h \
 	os/darwin/AudioOutputAudioUnitOSX.h os/darwin/DarwinSpecific.h \
-	os/darwin/SampleBufferDisplayLayerRenderer.h \
-	os/darwin/TGVVideoRenderer.h os/darwin/TGVVideoSource.h \
-	os/darwin/VideoToolboxEncoderSource.h \
 	os/linux/AudioInputALSA.h os/linux/AudioOutputALSA.h \
 	os/linux/AudioOutputPulse.h os/linux/AudioInputPulse.h \
 	os/linux/AudioPulse.h os/linux/PulseFunctions.h \
@@ -1447,11 +1432,7 @@ am__dirstamp = $(am__leading_dot)dirstamp
 @TARGET_OS_OSX_TRUE@	os/darwin/AudioUnitIO.lo \
 @TARGET_OS_OSX_TRUE@	os/darwin/AudioInputAudioUnitOSX.lo \
 @TARGET_OS_OSX_TRUE@	os/darwin/AudioOutputAudioUnitOSX.lo \
-@TARGET_OS_OSX_TRUE@	os/darwin/DarwinSpecific.lo \
-@TARGET_OS_OSX_TRUE@	os/darwin/SampleBufferDisplayLayerRenderer.lo \
-@TARGET_OS_OSX_TRUE@	os/darwin/TGVVideoRenderer.lo \
-@TARGET_OS_OSX_TRUE@	os/darwin/TGVVideoSource.lo \
-@TARGET_OS_OSX_TRUE@	os/darwin/VideoToolboxEncoderSource.lo
+@TARGET_OS_OSX_TRUE@	os/darwin/DarwinSpecific.lo
 @TARGET_OS_OSX_FALSE@@WITH_ALSA_TRUE@am__objects_2 = os/linux/AudioInputALSA.lo \
 @TARGET_OS_OSX_FALSE@@WITH_ALSA_TRUE@	os/linux/AudioOutputALSA.lo
 @TARGET_OS_OSX_FALSE@@WITH_PULSE_TRUE@am__objects_3 = os/linux/AudioOutputPulse.lo \
@@ -2054,10 +2035,6 @@ am__depfiles_remade = ./$(DEPDIR)/Buffers.Plo \
 	os/darwin/$(DEPDIR)/AudioOutputAudioUnitOSX.Plo \
 	os/darwin/$(DEPDIR)/AudioUnitIO.Plo \
 	os/darwin/$(DEPDIR)/DarwinSpecific.Plo \
-	os/darwin/$(DEPDIR)/SampleBufferDisplayLayerRenderer.Plo \
-	os/darwin/$(DEPDIR)/TGVVideoRenderer.Plo \
-	os/darwin/$(DEPDIR)/TGVVideoSource.Plo \
-	os/darwin/$(DEPDIR)/VideoToolboxEncoderSource.Plo \
 	os/linux/$(DEPDIR)/AudioInputALSA.Plo \
 	os/linux/$(DEPDIR)/AudioInputPulse.Plo \
 	os/linux/$(DEPDIR)/AudioOutputALSA.Plo \
@@ -2166,9 +2143,6 @@ am__nobase_tgvoipinclude_HEADERS_DIST = VoIPController.h Buffers.h \
 	os/darwin/AudioOutputAudioUnit.h os/darwin/AudioUnitIO.h \
 	os/darwin/AudioInputAudioUnitOSX.h \
 	os/darwin/AudioOutputAudioUnitOSX.h os/darwin/DarwinSpecific.h \
-	os/darwin/SampleBufferDisplayLayerRenderer.h \
-	os/darwin/TGVVideoRenderer.h os/darwin/TGVVideoSource.h \
-	os/darwin/VideoToolboxEncoderSource.h \
 	os/linux/AudioInputALSA.h os/linux/AudioOutputALSA.h \
 	os/linux/AudioOutputPulse.h os/linux/AudioInputPulse.h \
 	os/linux/AudioPulse.h os/linux/PulseFunctions.h \
@@ -2512,14 +2486,6 @@ os/darwin/AudioInputAudioUnitOSX.lo: os/darwin/$(am__dirstamp) \
 os/darwin/AudioOutputAudioUnitOSX.lo: os/darwin/$(am__dirstamp) \
 	os/darwin/$(DEPDIR)/$(am__dirstamp)
 os/darwin/DarwinSpecific.lo: os/darwin/$(am__dirstamp) \
-	os/darwin/$(DEPDIR)/$(am__dirstamp)
-os/darwin/SampleBufferDisplayLayerRenderer.lo:  \
-	os/darwin/$(am__dirstamp) os/darwin/$(DEPDIR)/$(am__dirstamp)
-os/darwin/TGVVideoRenderer.lo: os/darwin/$(am__dirstamp) \
-	os/darwin/$(DEPDIR)/$(am__dirstamp)
-os/darwin/TGVVideoSource.lo: os/darwin/$(am__dirstamp) \
-	os/darwin/$(DEPDIR)/$(am__dirstamp)
-os/darwin/VideoToolboxEncoderSource.lo: os/darwin/$(am__dirstamp) \
 	os/darwin/$(DEPDIR)/$(am__dirstamp)
 os/linux/$(am__dirstamp):
 	@$(MKDIR_P) os/linux
@@ -3917,10 +3883,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@os/darwin/$(DEPDIR)/AudioOutputAudioUnitOSX.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@os/darwin/$(DEPDIR)/AudioUnitIO.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@os/darwin/$(DEPDIR)/DarwinSpecific.Plo@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@os/darwin/$(DEPDIR)/SampleBufferDisplayLayerRenderer.Plo@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@os/darwin/$(DEPDIR)/TGVVideoRenderer.Plo@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@os/darwin/$(DEPDIR)/TGVVideoSource.Plo@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@os/darwin/$(DEPDIR)/VideoToolboxEncoderSource.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@os/linux/$(DEPDIR)/AudioInputALSA.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@os/linux/$(DEPDIR)/AudioInputPulse.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@os/linux/$(DEPDIR)/AudioOutputALSA.Plo@am__quote@ # am--include-marker
@@ -4785,10 +4747,6 @@ distclean: distclean-am
 	-rm -f os/darwin/$(DEPDIR)/AudioOutputAudioUnitOSX.Plo
 	-rm -f os/darwin/$(DEPDIR)/AudioUnitIO.Plo
 	-rm -f os/darwin/$(DEPDIR)/DarwinSpecific.Plo
-	-rm -f os/darwin/$(DEPDIR)/SampleBufferDisplayLayerRenderer.Plo
-	-rm -f os/darwin/$(DEPDIR)/TGVVideoRenderer.Plo
-	-rm -f os/darwin/$(DEPDIR)/TGVVideoSource.Plo
-	-rm -f os/darwin/$(DEPDIR)/VideoToolboxEncoderSource.Plo
 	-rm -f os/linux/$(DEPDIR)/AudioInputALSA.Plo
 	-rm -f os/linux/$(DEPDIR)/AudioInputPulse.Plo
 	-rm -f os/linux/$(DEPDIR)/AudioOutputALSA.Plo
@@ -5148,10 +5106,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f os/darwin/$(DEPDIR)/AudioOutputAudioUnitOSX.Plo
 	-rm -f os/darwin/$(DEPDIR)/AudioUnitIO.Plo
 	-rm -f os/darwin/$(DEPDIR)/DarwinSpecific.Plo
-	-rm -f os/darwin/$(DEPDIR)/SampleBufferDisplayLayerRenderer.Plo
-	-rm -f os/darwin/$(DEPDIR)/TGVVideoRenderer.Plo
-	-rm -f os/darwin/$(DEPDIR)/TGVVideoSource.Plo
-	-rm -f os/darwin/$(DEPDIR)/VideoToolboxEncoderSource.Plo
 	-rm -f os/linux/$(DEPDIR)/AudioInputALSA.Plo
 	-rm -f os/linux/$(DEPDIR)/AudioInputPulse.Plo
 	-rm -f os/linux/$(DEPDIR)/AudioOutputALSA.Plo
