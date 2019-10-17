@@ -5,6 +5,6 @@ aclocal
 glibtoolize --force
 automake --add-missing
 autoreconf
-./configure
+./configure --enable-audio-callback
 make -j8
 make install
