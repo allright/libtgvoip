@@ -6,5 +6,5 @@ libtoolize --force
 automake --add-missing
 autoreconf
 ./configure
-make -j8
+make -j8 --enable-audio-callback
 make install
